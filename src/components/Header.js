@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,9 +10,9 @@ const Header = () => {
         </div>
         <div className="midTitle col-12 col-md-7">Meal Cuisine Restaurant</div>
         <div className="contactBtn col-12 col-md-2">
-          <Nav.Link className="contact_btn_link" href="#">
+          <Link className="contact_btn_link" to="/contact">
             Contact Us
-          </Nav.Link>
+          </Link>
         </div>
       </div>
     </>

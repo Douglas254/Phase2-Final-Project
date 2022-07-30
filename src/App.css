@@ -44,7 +44,6 @@
 .contactBtn {
   font-size: 18px;
   text-decoration: none;
-  border: 1px solid #800064;
   padding: 7px;
   border-radius: 10px;
 }
@@ -64,4 +63,25 @@
 .contact_btn_link:hover {
   color: whitesmoke !important;
   background: linear-gradient(15deg, red, blue, yellow);
+}
+
+.active {
+  background: linear-gradient(
+    15deg,
+    rgba(149, 255, 0, 0.854),
+    rgba(171, 15, 185, 0.585),
+    rgba(119, 0, 255, 0.541)
+  ) !important
+  ;
+  font-size: 18px !important;
+  color: whitesmoke !important;
+  text-shadow: 2px 2px #001380 !important;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
