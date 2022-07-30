@@ -40,3 +40,28 @@
     transform: translateY(-15px);
   }
 }
+
+.contactBtn {
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid #800064;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.contact_btn_link {
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid #800064;
+  text-transform: uppercase;
+  padding: 5px !important;
+  border-radius: 10px;
+  color: white !important;
+  background: linear-gradient(15deg, yellow, blue, red);
+}
+
+.contact_btn_link:hover {
+  color: whitesmoke !important;
+  background: linear-gradient(15deg, red, blue, yellow);
+}
