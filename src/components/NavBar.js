@@ -17,22 +17,30 @@ const NavBar = () => {
   return (
     <>
       <div className="text-center">
-        <NavLink to="/" style={linkStyles} exact activeClassName="active">
+        <NavLink
+          exact
+          to="/"
+          style={linkStyles}
+          className="navLink"
+          activeClassName="active"
+        >
           Home
         </NavLink>
 
         <NavLink
+          exact
           to="/categories"
           style={linkStyles}
-          exact
+          className="navLink"
           activeClassName="active"
         >
           Categories
         </NavLink>
         <NavLink
+          exact
           to="/contact"
           style={linkStyles}
-          exact
+          className="navLink"
           activeClassName="active"
         >
           Contact Us

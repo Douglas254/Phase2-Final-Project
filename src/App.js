@@ -1,10 +1,14 @@
 import "./App.css";
-import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
+
+// components
+import Header from "./components/Header";
 import NavBar from "./components/NavBar";
-import MealCategories from "./components/MealCategories";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
+
+// pages
+import Home from "./pages/Home";
+import MealCategories from "./pages/MealCategories";
+import Contact from "./pages/Contact";
 
 function App() {
   return (

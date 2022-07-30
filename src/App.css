@@ -78,6 +78,19 @@
   text-shadow: 2px 2px #001380 !important;
 }
 
+.navLink:hover {
+  background: linear-gradient(
+    15deg,
+    rgba(149, 255, 0, 0.854),
+    rgba(171, 15, 185, 0.585),
+    rgba(119, 0, 255, 0.541)
+  ) !important
+  ;
+  font-size: 18px !important;
+  color: whitesmoke !important;
+  text-shadow: 2px 2px #001380 !important;
+}
+
 @media (max-width: 768px) {
   .header {
     display: grid;
