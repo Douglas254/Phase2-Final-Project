@@ -18,30 +18,30 @@ const NavBar = () => {
     <>
       <div className="text-center">
         <NavLink
-          exact
+          exact="true"
           to="/"
           style={linkStyles}
           className="navLink"
-          activeClassName="active"
+          activeclassname="active"
         >
           Home
         </NavLink>
 
         <NavLink
-          exact
+          exact="true"
           to="/categories"
           style={linkStyles}
           className="navLink"
-          activeClassName="active"
+          activeclassname="active"
         >
           Categories
         </NavLink>
         <NavLink
-          exact
+          exact="true"
           to="/contact"
           style={linkStyles}
           className="navLink"
-          activeClassName="active"
+          activeclassname="active"
         >
           Contact Us
         </NavLink>
