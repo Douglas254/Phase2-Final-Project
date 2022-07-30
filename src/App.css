@@ -1,3 +1,14 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-family: serif;
+  text-shadow: 2px 2px #ff00a6;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -89,6 +100,25 @@
   font-size: 18px !important;
   color: whitesmoke !important;
   text-shadow: 2px 2px #001380 !important;
+}
+
+.mealBtn {
+  border-bottom: 1px solid gray;
+}
+
+.mealSpan {
+  font-size: 19px !important;
+  margin: 0px 4px !important;
+}
+
+#generateMealBtn:focus {
+  box-shadow: none;
+  border: 2px dotted #fff;
+  box-shadow: 2px 5px #888888;
+}
+
+#generateMealBtn:hover {
+  font-size: 1.03rem;
 }
 
 @media (max-width: 768px) {

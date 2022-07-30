@@ -1,7 +1,14 @@
 import React from "react";
 
+// components
+import GenerateMealButton from "../components/GenerateMealButton";
+
 const Home = () => {
-  return <div>Home Component</div>;
+  return (
+    <>
+      <GenerateMealButton />
+    </>
+  );
 };
 
 export default Home;
