@@ -1,12 +1,68 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Button, Form } from "react-bootstrap";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const initialState = {
+  name: "",
+  urlLink: "",
+  description: "",
+};
+
+const api = "http://localhost:5000/categories";
 
 const AddCategories = () => {
+  const [state, setState] = useState(initialState);
+  const [data, setData] = useState([]);
+
+  // destructuring
+  const { name, urlLink, description } = state;
+
+  useEffect(() => {
+    loadCategories();
+  }, []);
+
+  const loadCategories = async () => {
+    const response = await axios.get(api);
+    setData(response.data);
+    // console.log(response.data);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!name || !urlLink || !description) {
+      toast.error("Please fill the required inputs");
+    } else {
+      toast.success("Posted Successfully");
+    }
+  };
+
+  const categoriesList = data.map((category, index) => (
+    <div key={index}>
+      <div className="mt-5">
+        <div className="card mx-3" style={{ width: "18rem" }}>
+          <img
+            src={category.urlLink}
+            className="card-img-top imgCard"
+            alt={category.name}
+            title={category.name}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{category.name}</h5>
+            <p className="card-text descriptionBg">{category.description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  ));
+
   return (
     <>
+      <ToastContainer />
       <Row>
         <Col md={4}>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Label style={{ textAlign: "left" }}>
                 <h6>Meal Name</h6>
@@ -33,6 +89,7 @@ const AddCategories = () => {
               </Form.Label>
               <Form.Control
                 as="textarea"
+                name="description"
                 placeholder="Enter Desrisption here"
                 style={{ height: "100px", boxShadow: "none" }}
               />
@@ -44,7 +101,9 @@ const AddCategories = () => {
             </div>
           </Form>
         </Col>
-        <Col md={8}>Your Categories Display</Col>
+        <Col md={8}>
+          <div className="categoryList">{categoriesList}</div>
+        </Col>
       </Row>
     </>
   );
