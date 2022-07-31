@@ -10,7 +10,7 @@ const initialState = {
   description: "",
 };
 
-const api = "http://localhost:5000/categories";
+// const api = "http://localhost:5000/categories";
 
 const AddCategories = () => {
   const [state, setState] = useState(initialState);
@@ -24,7 +24,11 @@ const AddCategories = () => {
   }, []);
 
   const loadCategories = async () => {
-    const response = await axios.get(api);
+    const devEnv = process.env.NODE_ENV !== "production";
+    const { REACT_APP_DEV_URL, REACT_APP_PROD_URL } = process.env;
+    const response = await axios.get(
+      `${devEnv ? REACT_APP_DEV_URL : REACT_APP_PROD_URL}`
+    );
     setData(response.data);
     // console.log(response.data);
   };
@@ -34,7 +38,12 @@ const AddCategories = () => {
     if (!name || !urlLink || !description) {
       toast.error("Please fill the required inputs");
     } else {
-      axios.post(api, state);
+      const devEnv = process.env.NODE_ENV !== "production";
+      const { REACT_APP_DEV_URL, REACT_APP_PROD_URL } = process.env;
+      axios.post(
+        `${`${devEnv ? REACT_APP_DEV_URL : REACT_APP_PROD_URL}`}`,
+        state
+      );
       toast.success("Posted Successfully");
       setState({
         name: "",
