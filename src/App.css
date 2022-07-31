@@ -126,10 +126,45 @@ h6 {
   font-size: 1.03rem;
 }
 
+.img-fluid {
+  border: 2px dashed purple !important;
+}
+
+#title {
+  text-transform: capitalize;
+}
+
+#ingredientsTitle {
+  text-transform: uppercase;
+}
+
+.underline {
+  position: absolute;
+  background: #800064;
+  width: 30px;
+  height: 2px;
+  left: 49%;
+}
+
+#iframe {
+  position: relative;
+}
+
+#iframe iframe {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border: 3px solid black;
+}
+
 @media (max-width: 768px) {
   .header {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
+  }
+  #iframe iframe {
+    width: 100%;
+    height: 250px;
   }
 }
