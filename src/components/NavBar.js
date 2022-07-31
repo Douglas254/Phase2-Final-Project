@@ -29,7 +29,7 @@ const NavBar = () => {
 
         <NavLink
           exact="true"
-          to="/categories"
+          to="/category"
           style={linkStyles}
           className="navLink"
           activeclassname="active"
