@@ -157,6 +157,23 @@ h6 {
   border: 3px solid black;
 }
 
+.like {
+  position: absolute;
+  left: 76%;
+  font-size: 30px;
+  cursor: pointer;
+  border: 1px solid purple;
+  border-radius: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.countLike {
+  font-size: 13px !important;
+  padding: 6px !important;
+}
+
 @media (max-width: 768px) {
   .header {
     display: grid;
@@ -166,5 +183,11 @@ h6 {
   #iframe iframe {
     width: 100%;
     height: 250px;
+  }
+  .like {
+    position: absolute;
+    left: 73%;
+    font-size: 20px;
+    cursor: pointer;
   }
 }
