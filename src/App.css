@@ -203,6 +203,33 @@ form {
   color: whitesmoke;
 }
 
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.descriptionBg {
+  background-color: rgba(0, 0, 0, 0.698);
+  color: #fff;
+  padding: 10px;
+  border-radius: 17px;
+  background: #313ea0;
+  box-shadow: inset 8px 8px 9px #1b2258, inset -8px -8px 9px #475ae8;
+}
+
+.imgCard {
+  border-radius: 29px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 33px 33px 65px #666666, -33px -33px 65px #ffffff;
+}
+
+.loading {
+  font-size: 40px;
+  color: #008000;
+  font-family: serif;
+  font-weight: 900;
+  font-style: italic;
+}
 @media (max-width: 768px) {
   .header {
     display: grid;

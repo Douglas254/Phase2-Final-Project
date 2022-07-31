@@ -1,7 +1,14 @@
 import React from "react";
 
+// components
+import Categories from "../components/Categories";
+
 const MealCategories = () => {
-  return <div>MealCategories Component</div>;
+  return (
+    <>
+      <Categories />
+    </>
+  );
 };
 
 export default MealCategories;
