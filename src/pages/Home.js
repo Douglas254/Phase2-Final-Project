@@ -6,8 +6,9 @@ import GenerateMealButton from "../components/GenerateMealButton";
 import DisplayMeals from "../components/DisplayMeals";
 import RecipeVideo from "../components/RecipeVideo";
 import LikeButton from "../components/LikeButton";
+import Comments from "../components/Comments";
 
-// our API 
+// our API
 const api = "https://www.themealdb.com/api/json/v1/1/random.php";
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
       <DisplayMeals data={data} />
       <RecipeVideo data={data} />
       <LikeButton data={data} count={count} onLikeClick={handleLikeClick} />
+      <Comments data={data} />
     </>
   );
 };
