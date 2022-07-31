@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import MealCategories from "./pages/MealCategories";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import CategoriesFreedom from "./components/AddCategories";
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/categories" element={<MealCategories />}></Route>
           <Route exact path="/contact" element={<Contact />}></Route>
+          <Route
+            exact
+            path="/addCategories"
+            element={<CategoriesFreedom />}
+          ></Route>
         </Routes>
       </div>
       <Footer />

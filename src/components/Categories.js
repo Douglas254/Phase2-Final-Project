@@ -1,5 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+// components
 import DisplayCategory from "./DisplayCategory";
 
 const api = "https://www.themealdb.com/api/json/v1/1/categories.php";
@@ -28,7 +31,14 @@ const Categories = () => {
   return (
     <div>
       {categories[0] ? (
-        <div className="categoryList">{categoriesList}</div>
+        <>
+          <div>
+            <Link to="/addCategories">
+              <button className="btn btn-success">Add Your Category</button>
+            </Link>
+          </div>
+          <div className="categoryList">{categoriesList}</div>
+        </>
       ) : (
         <span className="loading">Loading...☸️</span>
       )}
