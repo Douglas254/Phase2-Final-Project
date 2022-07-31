@@ -7,11 +7,21 @@ h2 {
 
 h3,
 h4,
-h5,
-h6 {
+h5 {
   text-transform: uppercase;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-shadow: 2px 2px #0048ff;
+}
+
+h6 {
+  text-transform: capitalize;
+  font-family: serif;
+  text-shadow: 1px 1px #000000;
+  margin: 5px 0px !important;
+}
+
+input {
+  box-shadow: none !important;
 }
 
 .header {
