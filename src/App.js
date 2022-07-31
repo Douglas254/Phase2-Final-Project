@@ -9,17 +9,21 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import MealCategories from "./pages/MealCategories";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <Header />
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Home />}></Route>
-        <Route exact path="/categories" element={<MealCategories />}></Route>
-        <Route exact path="/contact" element={<Contact />}></Route>
-      </Routes>
+      <div className="container">
+        <Header />
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/categories" element={<MealCategories />}></Route>
+          <Route exact path="/contact" element={<Contact />}></Route>
+        </Routes>
+      </div>
+      <Footer />
     </>
   );
 }
