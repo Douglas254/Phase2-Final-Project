@@ -34,7 +34,15 @@ const AddCategories = () => {
     if (!name || !urlLink || !description) {
       toast.error("Please fill the required inputs");
     } else {
+      axios.post(api, state);
       toast.success("Posted Successfully");
+      setState({
+        name: "",
+        urlLink: "",
+        description: "",
+      });
+      // call to update automatic after POST without refreshing browsers
+      setTimeout(() => loadCategories(), 500);
     }
   };
 
@@ -57,6 +65,12 @@ const AddCategories = () => {
     </div>
   ));
 
+  // function to handle the change event
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setState({ ...state, [name]: value });
+  };
+
   return (
     <>
       <ToastContainer />
@@ -71,6 +85,8 @@ const AddCategories = () => {
                 type="text"
                 placeholder="Enter your Meal Name"
                 name="name"
+                value={name}
+                onChange={handleChange}
               />
             </Form.Group>
             <Form.Group>
@@ -81,6 +97,8 @@ const AddCategories = () => {
                 type="text"
                 placeholder="Paste Image Url"
                 name="urlLink"
+                value={urlLink}
+                onChange={handleChange}
               />
             </Form.Group>
             <Form.Group>
@@ -90,6 +108,8 @@ const AddCategories = () => {
               <Form.Control
                 as="textarea"
                 name="description"
+                value={description}
+                onChange={handleChange}
                 placeholder="Enter Desrisption here"
                 style={{ height: "100px", boxShadow: "none" }}
               />
