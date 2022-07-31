@@ -1,6 +1,10 @@
 import React from "react";
 
-const GenerateMealButton = () => {
+const GenerateMealButton = ({ onGenerateButtonClick }) => {
+  function handleClick() {
+    onGenerateButtonClick();
+  }
+
   return (
     <div className="mealBtn">
       <div className="row">
@@ -14,7 +18,11 @@ const GenerateMealButton = () => {
       </div>
       <div className="row">
         <div className="text-center pb-3">
-          <button className="btn btn-success" id="generateMealBtn">
+          <button
+            className="btn btn-success"
+            id="generateMealBtn"
+            onClick={handleClick}
+          >
             Generate Meal!
           </button>
         </div>

@@ -1,12 +1,17 @@
 h1,
-h2,
+h2 {
+  text-transform: uppercase;
+  font-family: serif;
+  text-shadow: 2px 2px #ff00a6;
+}
+
 h3,
 h4,
 h5,
 h6 {
   text-transform: uppercase;
-  font-family: serif;
-  text-shadow: 2px 2px #ff00a6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px #0048ff;
 }
 
 .header {
